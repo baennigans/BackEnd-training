@@ -8,8 +8,9 @@ import org.springframework.stereotype.Component;
 public class Car {
 
 	@Autowired
-	@Qualifier("hankook")
+	@Qualifier("kumho")
 	private Tire tire;
+	
 	
 	public Car() {
 		System.out.println("Car() 생성자 호출...");
