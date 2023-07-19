@@ -10,14 +10,16 @@ import org.springframework.context.support.GenericXmlApplicationContext;
  * 3. interface ±â¹Ý
  */
 
-
 public class EmpMain {
 
 	public static void main(String[] args) {
-		
+
 		ApplicationContext context = new GenericXmlApplicationContext("aop-xml.xml");
-	
-		Programmer programmer = context.getBean("programmer",Programmer.class);
+
+		Employee programmer = context.getBean("programmer", Employee.class);
 		programmer.work();
+		
+		Employee designer = context.getBean("designer", Employee.class);
+		designer.work();
 	}
 }
