@@ -78,8 +78,12 @@
 		</where>
 	</select>
 	
-	<select id="selectNos" parameterType="array" resultMap="boardMap">
-	
+	<select id="selectNos" parameterType="int[]" resultMap="boardMap">
+		<include refid="selectBoard" />
+		where no in
+			<foreach collection="array" item="bno" open="(" separator="," close=")">
+			#{bno}
+			</foreach>
 	</select>
 	
 	

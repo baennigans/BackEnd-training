@@ -25,7 +25,8 @@ public class BoardDAO {
 //		selectOne();
 //		selectWhere();
 //		selectWhere2();
-		selectWhere3();
+//		selectWhere3();
+		selectNos();
 	}
 	
 	
