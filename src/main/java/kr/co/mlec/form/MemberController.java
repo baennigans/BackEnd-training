@@ -1,8 +1,7 @@
 package kr.co.mlec.form;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -15,17 +14,7 @@ public class MemberController {
 	}
 
 	@RequestMapping("/join.do")
-	public String join(HttpServletRequest request) {
-		String id = request.getParameter("id");
-		String password = request.getParameter("password");
-		String name = request.getParameter("name");
-		
-		MemberVO member = new MemberVO();
-		member.setId(id);
-		member.setPassword(password);
-		member.setName(name);
-		
-		request.setAttribute("member", member);
+	public String join(@ModelAttribute("member") MemberVO member) {
 		return "form/memberInfo";
 	}
 
