@@ -19,5 +19,5 @@ public interface BoardDAO {
 	 */
 	List<BoardVO> selectAllBoard();
 
-	BoardVO selectBoardByNo();
+	BoardVO selectBoardByNo(int no);
 }

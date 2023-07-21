@@ -23,8 +23,8 @@ public class BoardDAOImpl implements BoardDAO {
 
 	
 	@Override
-	public BoardVO selectBoardByNo() {
-		BoardVO board = sqlSession.selectOne("board.dao.BoardDAO.selectBoardByNo");
+	public BoardVO selectBoardByNo(int no) {
+		BoardVO board = sqlSession.selectOne("board.dao.BoardDAO.selectBoardByNo", no);
 		return board;
 	}
 

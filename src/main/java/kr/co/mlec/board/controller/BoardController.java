@@ -18,6 +18,7 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 
+	
 	@GetMapping("/board")
 	public String list(HttpServletRequest request) {
 
@@ -28,10 +29,11 @@ public class BoardController {
 
 	
 	@GetMapping("/board/detail")
-	public String detail(@RequestParam("no") int no) {
+	public String detail(HttpServletRequest request, @RequestParam("no") int no) {
 		
-		System.out.println("no : "+no);
-		boardService.getBoard(no);
+		BoardVO board = boardService.getBoard(no);
+		request.setAttribute("board", board);
+		
 		return "board/detail";
 	}
 }

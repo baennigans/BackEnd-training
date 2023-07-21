@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h2>게시판 상세 페이지</h2>
-	<h3>${ board.writer }</h3>
+	<h3>${ board.content }</h3>
 </body>
 </html>

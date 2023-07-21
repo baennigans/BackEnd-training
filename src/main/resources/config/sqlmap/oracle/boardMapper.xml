@@ -15,4 +15,5 @@
 		  from t_board
 		 where no = #{no}
 	</select>
+	
 </mapper>
