@@ -7,4 +7,6 @@ import kr.co.mlec.board.vo.BoardVO;
 public interface BoardService {
 
 	public List<BoardVO> getBoardList();
+
+	public void getBoard(int no);
 }

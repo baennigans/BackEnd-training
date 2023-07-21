@@ -25,15 +25,12 @@ public class DBTest {
 	@Autowired
 	private DataSource ds;
 
-	
 	@Autowired
 	private SqlSessionTemplate session;
 
-	
 	@Autowired
 	private BoardDAO boardDAO;
 
-	
 	@Ignore
 	@Test
 	public void dataSource테스트() throws Exception {
@@ -47,7 +44,6 @@ public class DBTest {
 		assertNotNull(session);
 	}
 
-	
 	@Ignore
 	@Test
 	public void 전체게시글조회테스트() throws Exception {
@@ -58,7 +54,7 @@ public class DBTest {
 		}
 	}
 
-	
+	@Ignore
 	@Test
 	public void 전체게시글조회BoarDAO테스트() throws Exception {
 		List<BoardVO> list = boardDAO.selectAllBoard();
@@ -66,6 +62,12 @@ public class DBTest {
 		for (BoardVO b : list) {
 			System.out.println(b);
 		}
+	}
+	
+	@Test
+	public void 상세게시글조회테스트() throws Exception {
+		BoardVO board = session.selectOne("board.dao.BoardDAO.selectBoardByNo", 21);
+		System.out.println(board);
 	}
 	
 }

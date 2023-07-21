@@ -1,6 +1,7 @@
 package kr.co.mlec.board.dao;
 
 import java.util.List;
+
 import kr.co.mlec.board.vo.BoardVO;
 
 /**
@@ -17,4 +18,6 @@ public interface BoardDAO {
 	 * @return 조회된 게시글
 	 */
 	List<BoardVO> selectAllBoard();
+
+	BoardVO selectBoardByNo();
 }

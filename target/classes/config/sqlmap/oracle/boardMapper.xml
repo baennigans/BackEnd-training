@@ -5,10 +5,14 @@
 <mapper namespace="board.dao.BoardDAO">
 
 	<select id="selectAllBoard" resultType="boardVO">
-		select no, title, writer,
-		to_char(reg_date, 'yyyy-mm-dd') regDate
+		select no, title, writer, to_char(reg_date, 'yyyy-mm-dd') regDate
 		from t_board
 		order by no desc
 	</select>
 
+	<select id="selectBoardByNo" parameterType="int" resultType="boardVO">
+		select no, title, writer, content, view_cnt viewCnt, to_char(reg_date, 'yyyy-mm-dd') as regDate
+		  from t_board
+		 where no = #{no}
+	</select>
 </mapper>
