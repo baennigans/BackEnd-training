@@ -17,7 +17,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import kr.co.mlec.board.dao.BoardDAO;
 import kr.co.mlec.board.vo.BoardVO;
 
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:config/spring/spring-mvc.xml" })
 public class DBTest {
@@ -31,6 +30,7 @@ public class DBTest {
 	@Autowired
 	private BoardDAO boardDAO;
 
+	
 	@Ignore
 	@Test
 	public void dataSource테스트() throws Exception {
@@ -38,12 +38,14 @@ public class DBTest {
 		System.out.println(ds);
 	}
 
+	
 	@Ignore
 	@Test
 	public void sqlSession테스트() throws Exception {
 		assertNotNull(session);
 	}
 
+	
 	@Ignore
 	@Test
 	public void 전체게시글조회테스트() throws Exception {
@@ -53,6 +55,7 @@ public class DBTest {
 		}
 	}
 
+	
 	@Ignore
 	@Test
 	public void 전체게시글조회BoarDAO테스트() throws Exception {
@@ -61,10 +64,11 @@ public class DBTest {
 			System.out.println(b);
 		}
 	}
+
 	
 	@Test
 	public void 상세게시글조회테스트() throws Exception {
-		BoardVO board = session.selectOne("board.dao.BoardDAO.selectBoardByNo", 62);
+		BoardVO board = session.selectOne("board.dao.BoardDAO.selectBoardByNo", 21);
 		System.out.println(board);
 	}
 	

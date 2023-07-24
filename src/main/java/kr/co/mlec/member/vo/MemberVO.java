@@ -6,7 +6,7 @@ public class MemberVO {
 	private String password;
 	private String name;
 	private String type;
-	
+
 	public MemberVO() {
 	}
 
@@ -46,6 +46,5 @@ public class MemberVO {
 	public String toString() {
 		return "MemberVO [id=" + id + ", password=" + password + ", name=" + name + ", type=" + type + "]";
 	}
-	
-	
+
 }

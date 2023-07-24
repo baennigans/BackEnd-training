@@ -33,4 +33,5 @@ public class BoardServiceImpl implements BoardService {
 	public void addBoard(BoardVO board) {
 		boardDAO.insertBoard(board);
 	}
+
 }

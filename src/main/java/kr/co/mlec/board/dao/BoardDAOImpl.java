@@ -13,7 +13,7 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
-	
+
 	
 	@Override
 	public List<BoardVO> selectAllBoard() {

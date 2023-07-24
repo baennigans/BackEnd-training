@@ -9,6 +9,7 @@ public interface BoardService {
 	public List<BoardVO> getBoardList();
 
 	public BoardVO getBoardByNo(int boardNo);
-	
+
 	void addBoard(BoardVO board);
+	
 }
