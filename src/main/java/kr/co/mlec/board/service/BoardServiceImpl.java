@@ -14,15 +14,17 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardDAO boardDAO;
 
+	
 	@Override
 	public List<BoardVO> getBoardList() {
 		List<BoardVO> boardList = boardDAO.selectAllBoard();
 		return boardList;
 	}
 
+	
 	@Override
-	public BoardVO getBoard(int no) {
-		BoardVO board = boardDAO.selectBoardByNo(no);
+	public BoardVO getBoardByNo(int boardNo) {
+		BoardVO board = boardDAO.selectBoardByNo(boardNo);
 		return board;
 	}
 

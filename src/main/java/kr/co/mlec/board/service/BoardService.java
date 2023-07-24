@@ -8,5 +8,6 @@ public interface BoardService {
 
 	public List<BoardVO> getBoardList();
 
-	public BoardVO getBoard(int no);
+	public BoardVO getBoardByNo(int boardNo);
+	
 }

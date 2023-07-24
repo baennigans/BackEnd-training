@@ -21,7 +21,7 @@
 	<tr>
 		<td>${ board.no }</td>
 		<td>
-			<a href="${ pageContext.request.contextPath }/board/detail?no=${ board.no }">
+			<a href="${ pageContext.request.contextPath }/board/${ board.no }">
 				${ board.title }
 			</a>
 		</td>
@@ -32,4 +32,3 @@
 	</table>
 </body>
 </html>
-
