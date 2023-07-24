@@ -10,4 +10,5 @@ public interface BoardService {
 
 	public BoardVO getBoardByNo(int boardNo);
 	
+	void addBoard(BoardVO board);
 }
