@@ -21,6 +21,8 @@ public class BoardVO {
 	private int viewCnt;
 	private String regDate;
 
+	private int replyCnt;
+
 	public BoardVO() {
 		super();
 	}
@@ -71,6 +73,14 @@ public class BoardVO {
 
 	public void setRegDate(String regDate) {
 		this.regDate = regDate;
+	}
+
+	public int getReplyCnt() {
+		return replyCnt;
+	}
+
+	public void setReplyCnt(int replyCnt) {
+		this.replyCnt = replyCnt;
 	}
 
 	@Override

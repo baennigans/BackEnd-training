@@ -2,12 +2,18 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="member.dao.MemberDAO">
+<mapper namespace="reply.dao.ReplyDAO">
 
-	<select id="login" parameterType="memberVO" resultType="memberVO">
-		select id, password, name, type
-		from t_member
-		where id = #{id} and password = #{password}
+	<insert id="insert" parameterType="replyVO">
+		insert into t_reply(no, board_no, content, writer)
+		values(seq_t_reply_no.nextval, #{boardNo}, #{content}, #{writer})
+	</insert>
+	
+	<select id="selectAll" parameterType="int" resultType="replyVO">
+		select no, board_no boardNo, content, writer, to_char(reg_date, 'yyyy-mm-dd') as regDate
+		  from t_reply
+		 where board_no = #{boardNo}
+		 order by no desc
 	</select>
 
 </mapper>

@@ -53,5 +53,5 @@ public class ReplyVO {
 		return "ReplyVO [no=" + no + ", boardNo=" + boardNo + ", content=" + content + ", writer=" + writer
 				+ ", regDate=" + regDate + "]";
 	}
-
+	
 }
