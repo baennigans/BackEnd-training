@@ -46,6 +46,21 @@
 			록</button>
 		<button onclick="location.href=''">수 정</button>
 		<button onclick="location.href=''">삭 제</button>
+		
+		
+	<form name="rform">
+		댓글 : <input type="text" name="content" size="50" />
+		이름 : <input type="text" name="writer" size="10" />
+		<button type="button">댓글추가</button>
+		<div id="replyList">
+		</div>
+	</form>
+		
+		
+		
+		
+		
+		
 	</div>
 </body>
 </html>
